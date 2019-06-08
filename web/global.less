@@ -1,7 +1,18 @@
+/*
+ * import normalize.css first and use autoprefixer
+ * use default layout and container of the ui lib
+ * 先引入 normalize.css，并且使用 autoprefixer
+ * 使用 UI 库中默认的布局与容器
+ */
+
+// use border-box style
+// 使用 border-box 样式
 * {
   box-sizing: border-box;
 }
 
+// scroll bar style
+// 滚动条样式
 ::-webkit-scrollbar { 
   width: 8px; 
   height: 8px; 
@@ -22,6 +33,8 @@
   background-color: #555; 
 }
 
+// set default width
+// 设置默认宽度
 html,
 body,
 #app,
@@ -29,88 +42,29 @@ body,
   width: 100%;
 }
 
+// overflow
 .overflow-hidden {
   overflow: hidden;
 }
 
 .overflow-x-hidden {
-  overflow: auto;
-  overflow-x: hidden;
+  overflow: hidden auto;
 }
 
 .overflow-y-hidden {
-  overflow: auto;
-  overflow-y: hidden;
+  overflow: auto hidden;
 }
 
 .overflow-x-auto {
-  overflow: hidden;
-  overflow-x: auto;
+  overflow: auto hidden;
 }
 
 .overflow-y-auto {
-  overflow: hidden;
-  overflow-y: auto;
+  overflow: hidden auto;
 }
 
-.row-item {
-  flex: 0 0 100%;
-  width: 100%;
-  overflow: hidden;
-}
-
-.row-item-scroll {
-  flex: 0 0 100%;
-  width: 100%;
-  overflow: hidden;
-  overflow-x: auto;
-}
-
-.col-item {
-  flex: 0 0 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.col-item-scroll {
-  flex: 0 0 100%;
-  height: 100%;
-  overflow: hidden;
-  overflow-y: auto;
-}
-
-.row-container {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  flex-basis: auto;
-  min-width: 0;
-}
-
-.col-container {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  flex-basis: auto;
-  min-width: 0;
-}
-
-.header {
-
-}
-
-.main {
-  flex: 1;
-  flex-basis: auto;
-}
-
-.footer {
-
-}
-
-
-/* customed table styles based on element-ui */
-/* you should modify to suit your using ui */
+// customed table styles based on element-ui
+// you should modify to suit your using ui
 * + .table {
   margin-top: 10px;
 }

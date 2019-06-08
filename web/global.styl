@@ -1,0 +1,105 @@
+/*
+ * import normalize.css first and use autoprefixer
+ * use default layout and container of the ui lib
+ * 先引入 normalize.css，并且使用 autoprefixer
+ * 使用 UI 库中默认的布局与容器
+ */
+
+// use border-box style
+// 使用 border-box 样式
+* {
+  box-sizing: border-box;
+}
+
+// scroll bar style
+// 滚动条样式
+::-webkit-scrollbar { 
+  width: 8px; 
+  height: 8px; 
+  background-color: #F5F5F5; 
+} 
+   
+::-webkit-scrollbar-track { 
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.3); 
+  -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3); 
+  border-radius: 8px; 
+  background-color: #F5F5F5; 
+} 
+   
+::-webkit-scrollbar-thumb { 
+  box-shadow: inset 0 0 4px rgba(0,0,0,.3); 
+  -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.3); 
+  border-radius: 8px; 
+  background-color: #555; 
+}
+
+// set default width
+// 设置默认宽度
+html,
+body,
+#app,
+#root {
+  width: 100%;
+}
+
+// overflow
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-x-hidden {
+  overflow: hidden auto;
+}
+
+.overflow-y-hidden {
+  overflow: auto hidden;
+}
+
+.overflow-x-auto {
+  overflow: auto hidden;
+}
+
+.overflow-y-auto {
+  overflow: hidden auto;
+}
+
+// customed table styles based on element-ui
+// you should modify to suit your using ui
+* + .table {
+  margin-top: 10px;
+}
+
+.table {
+  width: 100%;
+  height: auto;
+  background-color: #FFF;
+  border: 1px solid #EEE;
+  border-collapse: collapse;
+  overflow: hidden;
+  overflow-y: auto;
+
+  & > tr {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #EEE;
+    text-align: center;
+
+    &:first-child {
+      color: #909399;
+      font-weight: 700;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    & > * {
+      border-right: 1px solid #EEE;
+      padding: 2px 8px;
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+}
