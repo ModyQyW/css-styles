@@ -1,6 +1,126 @@
-import { StyleSheet } from 'reactnative';
+import {
+  StyleSheet, Dimensions, StatusBar, Platform,
+} from 'react-native';
 
-export default StyleSheet.create({
+const { height, width } = Dimensions.get('window');
+
+const XWIDTH = 375;
+const XHEIGHT = 812;
+const isIos = Platform.OS === 'ios';
+const isIphoneX = isIos && width === XWIDTH && height === XHEIGHT;
+
+const androidMarginTop = StatusBar.currentHeight;
+const iphoneXMarginTop = 44;
+const iosMarginTop = 20;
+
+const androidMarginBottom = 0;
+const iphoneXMarginBottom = 83;
+const iosMarginBottom = 49;
+
+const marginTop = androidMarginTop || (isIphoneX ? iphoneXMarginTop : iosMarginTop);
+/* eslint-disable */
+const marginBottom = isIos
+  ? (isIphoneX ? iphoneXMarginBottom : iosMarginBottom)
+  : androidMarginBottom;
+/* eslint-enable */
+const cutHeight = marginTop + marginBottom;
+
+const styles = StyleSheet.create({
+  /*
+   * container
+   * usually the root element of page
+   */
+  container: {
+    width,
+    height: height - cutHeight,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop,
+    marginBottom,
+  },
+  /*
+   * header with 1 or 3 item(s)
+   * 1 item: title
+   * 3 items: arrow-left icon, title, empty /  menu icon
+   */
+  header: {
+    flex: 0,
+    width: '100%',
+    height: 40,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: 0,
+    paddingRight: 8,
+    paddingBottom: 0,
+    paddingLeft: 8,
+    borderBottomWidth: 1,
+    borderBottomColor: grey200,
+  },
+  // suppose to be an icon
+  headerLeft: {
+    flex: 0,
+    width: 26,
+    height: 26,
+  },
+  // suppose to be a View wrapping a Text
+  headerMiddle: {
+    flex: 1,
+    height: 26,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+  },
+  // suppose to be an icon
+  headerRight: {
+    flex: 0,
+    width: 26,
+    height: 26,
+  },
+  /* body */
+  // for View
+  body: {
+    flex: 1,
+    width: '100%',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  bodyNav: {
+    flex: 0,
+    width: '100%',
+    height: 40,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingTop: 0,
+    paddingRight: 8,
+    paddingBottom: 0,
+    paddingLeft: 8,
+  },
+  // for ScrollView and FlatList
+  bodyMain: {
+    flex: 1,
+    width: '100%',
+  },
+  /* footer */
+  footer: {
+    flex: 0,
+    width: '100%',
+    height: 40,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: 0,
+    paddingRight: 8,
+    paddingBottom: 0,
+    paddingLeft: 8,
+    borderTopWidth: 1,
+    borderTopColor: grey200,
+  },
+  // typography
   textThin: {
     fontWeight: '100',
   },
@@ -41,72 +161,83 @@ export default StyleSheet.create({
     fontWeight: '900',
   },
   text12: {
-    fontsize: 12,
-    lineheight: 20,
+    fontSize: 12,
+    lineHeight: 20,
   },
   text13: {
-    fontsize: 13,
-    lineheight: 21,
+    fontSize: 13,
+    lineHeight: 21,
   },
   text14: {
-    fontsize: 14,
-    lineheight: 22,
+    fontSize: 14,
+    lineHeight: 22,
   },
   text15: {
-    fontsize: 15,
-    lineheight: 23,
+    fontSize: 15,
+    lineHeight: 23,
   },
   text16: {
-    fontsize: 16,
-    lineheight: 24,
+    fontSize: 16,
+    lineHeight: 24,
   },
   text17: {
-    fontsize: 17,
-    lineheight: 25,
+    fontSize: 17,
+    lineHeight: 25,
   },
   text18: {
-    fontsize: 18,
-    lineheight: 26,
+    fontSize: 18,
+    lineHeight: 26,
   },
   text19: {
-    fontsize: 19,
-    lineheight: 27,
+    fontSize: 19,
+    lineHeight: 27,
   },
   text20: {
-    fontsize: 20,
-    lineheight: 28,
+    fontSize: 20,
+    lineHeight: 28,
   },
   text21: {
-    fontsize: 21,
-    lineheight: 29,
+    fontSize: 21,
+    lineHeight: 29,
   },
   text22: {
-    fontsize: 22,
-    lineheight: 30,
+    fontSize: 22,
+    lineHeight: 30,
   },
   text23: {
-    fontsize: 23,
-    lineheight: 31,
+    fontSize: 23,
+    lineHeight: 31,
   },
   text24: {
-    fontsize: 24,
-    lineheight: 32,
+    fontSize: 24,
+    lineHeight: 32,
   },
-  text25: {
-    fontsize: 25,
-    lineheight: 33,
+  textSecondary: {
+    fontSize: 12,
+    fontWeight: '200',
+    lineHeight: 20,
   },
-  text26: {
-    fontsize: 26,
-    lineheight: 34,
+  textMainLight: {
+    fontSize: 13,
+    fontWeight: '300',
+    lineHeight: 21,
   },
-  textLeft: {
-    textAlign: 'left',
+  // default text styles
+  textMain: {
+    fontSize: 14,
+    fontWeight: '400',
+    lineHeight: 22,
   },
-  textCenter: {
-    textalign: 'center',
+  textTitleLight: {
+    fontSize: 16,
+    fontWeight: '500',
+    lineHeight: 24,
   },
-  textRight: {
-    textalign: 'right',
+  textTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    lineHeight: 26,
   },
 });
+
+export default styles;
