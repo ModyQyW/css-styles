@@ -57,20 +57,50 @@ page {
   overflow: hidden;
   background-color: #FFF6DB;
 
-  &>.top {
+  & > .header,
+  & > .bottom {
     box-sizing: border-box;
     width: 100%;
     flex: 0 0 48PX;
-    padding: 10PX 12PX;
+    padding: 0 12PX;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1PX solid #DDD;
     background-color: #FFF;
+
+    & > .left,
+    & > .right {
+      box-sizing: border-box;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    & > .left {
+      flex: auto;
+      justify-content: flex-start;
+    }
+
+    & > .right {
+      flex: none;
+      justify-content: flex-end;
+    }
   }
 
-  &>.main {
+  & > .header {
+    flex: 0 0 48PX;
+    border-bottom: 1PX solid #DDD;
+  }
+
+  & > .footer {
+    flex: 0 0 60PX;
+    border-top: 1PX solid #DDD;
+  }
+
+  & > .main {
     box-sizing: border-box;
     width: 100%;
     flex: 1;
@@ -80,44 +110,6 @@ page {
     align-items: flex-start;
     margin: 0;
     padding: 0;
-  }
-
-  &>.bottom {
-    box-sizing: border-box;
-    width: 100%;
-    flex: 0 0 60PX;
-    padding: 0 12PX;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1PX solid #DDD;
-    background-color: #FFF;
-  }
-
-  &>.top,
-  &>.bottom {
-    &>.left {
-      box-sizing: border-box;
-      flex: auto;
-      height: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    &>.right {
-      box-sizing: border-box;
-      flex: none;
-      height: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      align-items: center;
-      overflow: hidden;
-    }
   }
 }
 
@@ -170,14 +162,18 @@ page {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 0 4PX;
-  padding: 0 16PX;
+  margin: 0;
+  padding: 0;
   height: 40PX;
   border: none;
   text-align: center;
   font-size: 14PX;
   line-height: 22PX;
   color: #000;
+
+  &::after {
+    border: none;
+  }
 }
 
 .btn-border {
