@@ -4,5 +4,13 @@
   "description": "Custom css styles.",
   "private": true,
   "author": "ModyQyW",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "scripts": {
+    "lint": "stylelint ./"
+  },
+  "devDependencies": {
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-order": "^3.0.1"
+  }
 }

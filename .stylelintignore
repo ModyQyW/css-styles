@@ -1,0 +1,6 @@
+assets
+node_modules
+.gitattributes
+LICENSE
+package.json
+app
