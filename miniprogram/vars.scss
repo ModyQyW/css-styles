@@ -1,13 +1,6 @@
-$borderGray: #DDD;
-$backgroundGray: #F6F6F6;
-$textGray: #8E8E8E;
-$borderGrey: #DDD;
-$backgroundGrey: #F6F6F6;
-$textGrey: #8E8E8E;
+/* preset colors */
 $black: #000;
 $white: #FFF;
-
-// https://material.io/design/color/the-color-system.html#tools-for-picking-colors
 // red
 $red: #F44336;
 $red50: #FFEBEE;
@@ -324,3 +317,19 @@ $blueGrey600: #546E7A;
 $blueGrey700: #455A64;
 $blueGrey800: #37474F;
 $blueGrey900: #263238;
+
+/* project colors */
+$borderGray: #DDD;
+$backgroundGray: #F6F6F6;
+$textGray: #8E8E8E;
+$borderGrey: #DDD;
+$backgroundGrey: #F6F6F6;
+$textGrey: #8E8E8E;
+
+/* project layout */
+$headerHeight: 96rpx;
+$headerVerticalPadding: 0;
+$headerHorizontalPadding: 24rpx;
+$footerHeight: 120rpx;
+$footerVerticalPadding: 0;
+$footerHorizontalPadding: 24rpx;
