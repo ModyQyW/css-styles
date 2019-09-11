@@ -70,13 +70,13 @@ page {
   .header {
     flex: 0 0 $headerHeight;
     padding: $headerVerticalPadding $headerHorizontalPadding;
-    border-bottom: 2rpx solid $borderGrey;
+    border-bottom: 2rpx solid $border;
   }
 
   .footer {
     flex: 0 0 $footerHeight;
     padding: $footerVerticalPadding $footerHorizontalPadding;
-    border-top: 2rpx solid $borderGrey;
+    border-top: 2rpx solid $border;
   }
 
   .aside {
@@ -309,7 +309,7 @@ page {
   }
 
   &[disabled] {
-    background-color: $backgroundGrey;
+    background-color: $border;
   }
 }
 

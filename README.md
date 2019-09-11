@@ -1,21 +1,27 @@
 # css-styles
 
-* ModyQyW *
+A repo of my css styles used in different projects, including react-native, miniprogram(taro/uni-app) and web(react/vue).
 
----
+## Getting Started
 
-## en
+Just copy, paste and enjoy.
 
-This is a repo of my css styles used in different projects, including react-native, miniprogram(taro/mpvue) and web(vue).
+## Features
 
-It's still updating. Hope this helpful.
+- Preset layouts
+- Preset typography
+- Preset colors, two styles - material design and ant design
 
-Welcome PRs & issues.
+## Contributing
 
-## zh-CN
+PRs and issues are welcome.
 
-这是一个关于我在不同项目（RN，taro/mpvue 小程序和 vue 网页）中使用到的 css 样式的仓库。
+## Authors
 
-仍在更新中。希望这对你有用。
+[ModyQyW](https://github.com/ModyQyW)
 
-欢迎提 PR 和 issue。
+See also the list of [contributors](https://github.com/ModyQyW/css-styles/contributors) who participated in this project.
+
+## License
+
+Apache-2.0
