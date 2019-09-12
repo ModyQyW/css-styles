@@ -1,6 +1,4 @@
-import {
-  StyleSheet, Dimensions, StatusBar, Platform
-} from 'react-native'
+import { StyleSheet, Dimensions, StatusBar, Platform } from 'react-native'
 
 const colors = {
   black: '#000',
@@ -641,8 +639,7 @@ const marginBottom = isIos
   : androidMarginBottom
 const cutHeight = marginTop + marginBottom
 
-const layout = StyleSheet.create({
-  /* layout */
+const layouts = StyleSheet.create({
   // container: View
   // usually the root element of page
   container: {
@@ -735,4 +732,4 @@ const layout = StyleSheet.create({
   }
 })
 
-export default { colors, typography, layout }
+export default { colors, typography, layouts }
