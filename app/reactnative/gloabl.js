@@ -1,268 +1,6 @@
 import {
-  StyleSheet, Dimensions, StatusBar, Platform,
-} from 'react-native';
-
-const { height, width } = Dimensions.get('window');
-
-const XWIDTH = 375;
-const XHEIGHT = 812;
-const isIos = Platform.OS === 'ios';
-const isIphoneX = isIos && width === XWIDTH && height === XHEIGHT;
-
-const androidMarginTop = StatusBar.currentHeight;
-const iphoneXMarginTop = 44;
-const iosMarginTop = 20;
-
-const androidMarginBottom = 0;
-const iphoneXMarginBottom = 83;
-const iosMarginBottom = 49;
-
-const marginTop = androidMarginTop || (isIphoneX ? iphoneXMarginTop : iosMarginTop);
-const marginBottom = isIos
-  ? (isIphoneX ? iphoneXMarginBottom : iosMarginBottom)
-  : androidMarginBottom;
-const cutHeight = marginTop + marginBottom;
-
-const styles = StyleSheet.create({
-  /* layout */
-  // container: View
-  // usually the root element of page
-  container: {
-    width,
-    height: height - cutHeight,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop,
-    marginBottom,
-  },
-  // header with 1 or 3 item(s): View
-  // 1 item: title
-  // 3 items: arrow-left icon, title, empty /  menu icon
-  header: {
-    flex: 0,
-    width: '100%',
-    height: 40,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingTop: 0,
-    paddingRight: 8,
-    paddingBottom: 0,
-    paddingLeft: 8,
-    borderBottomWidth: 1,
-    borderBottomColor: grey200,
-  },
-  // supposed to be an icon
-  headerLeft: {
-    flex: 0,
-    width: 26,
-    height: 26,
-  },
-  // supposed to be a View wrapping a Text
-  headerMiddle: {
-    flex: 1,
-    height: 26,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
-  },
-  // supposed to be an icon
-  headerRight: {
-    flex: 0,
-    width: 26,
-    height: 26,
-  },
-  // body: View
-  body: {
-    flex: 1,
-    width: '100%',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  // body's child: View
-  bodyNav: {
-    flex: 0,
-    width: '100%',
-    height: 40,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingTop: 0,
-    paddingRight: 8,
-    paddingBottom: 0,
-    paddingLeft: 8,
-  },
-  // body's child: ScrollView / FlatList
-  bodyMain: {
-    flex: 1,
-    width: '100%',
-  },
-  // footer: View
-  footer: {
-    flex: 0,
-    width: '100%',
-    height: 40,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingTop: 0,
-    paddingRight: 8,
-    paddingBottom: 0,
-    paddingLeft: 8,
-    borderTopWidth: 1,
-    borderTopColor: grey200,
-  },
-  // typography
-  textThin: {
-    fontWeight: '100',
-  },
-  textExtraLight: {
-    fontWeight: '200',
-  },
-  textUltraLight: {
-    fontWeight: '200',
-  },
-  textLight: {
-    fontWeight: '300',
-  },
-  textRegular: {
-    fontWeight: '400',
-  },
-  textNormal: {
-    fontWeight: '400',
-  },
-  textMedium: {
-    fontWeight: '500',
-  },
-  textSemiBold: {
-    fontWeight: '600',
-  },
-  textBold: {
-    fontWeight: '700',
-  },
-  textExtraBold: {
-    fontWeight: '800',
-  },
-  textUltraBold: {
-    fontWeight: '800',
-  },
-  textBlack: {
-    fontWeight: '900',
-  },
-  textHeavy: {
-    fontWeight: '900',
-  },
-  text12: {
-    fontSize: 12,
-    lineHeight: 20,
-  },
-  text13: {
-    fontSize: 13,
-    lineHeight: 21,
-  },
-  text14: {
-    fontSize: 14,
-    lineHeight: 22,
-  },
-  text15: {
-    fontSize: 15,
-    lineHeight: 23,
-  },
-  text16: {
-    fontSize: 16,
-    lineHeight: 24,
-  },
-  text17: {
-    fontSize: 17,
-    lineHeight: 25,
-  },
-  text18: {
-    fontSize: 18,
-    lineHeight: 26,
-  },
-  text19: {
-    fontSize: 19,
-    lineHeight: 27,
-  },
-  text20: {
-    fontSize: 20,
-    lineHeight: 28,
-  },
-  text21: {
-    fontSize: 21,
-    lineHeight: 29,
-  },
-  text22: {
-    fontSize: 22,
-    lineHeight: 30,
-  },
-  text23: {
-    fontSize: 23,
-    lineHeight: 31,
-  },
-  text24: {
-    fontSize: 24,
-    lineHeight: 32,
-  },
-  textLeft: {
-    textAlign: 'left',
-  },
-  textRight: {
-    textAlign: 'right',
-  },
-  textAlignCenter: {
-    textAlign: 'center',
-  },
-  textTop: {
-    textAlignVertical: 'top',
-  },
-  textBottom: {
-    textAlignVertical: 'bottom',
-  },
-  textAlignVerticalCenter: {
-    textAlignVertical: 'center',
-  },
-  textCenter: {
-    textAlign: 'center',
-    textAlignVertical: 'center'
-  },
-  textDisabled: {
-    color: 'rgba(0, 0, 0, .25)'
-  },
-  textSecondary: {
-    fontSize: 12,
-    fontWeight: '200',
-    lineHeight: 20,
-    color: 'rgba(0, 0, 0, 0.45)'
-  },
-  textMainLight: {
-    fontSize: 13,
-    fontWeight: '300',
-    lineHeight: 21,
-    color: 'rgba(0, 0, 0, 0.55)'
-  },
-  textMain: {
-    fontSize: 14,
-    fontWeight: '400',
-    lineHeight: 22,
-    color: 'rgba(0, 0, 0, 0.65)'
-  },
-  textTitleLight: {
-    fontSize: 16,
-    fontWeight: '500',
-    lineHeight: 24,
-    color: 'rgba(0, 0, 0, 0.75)'
-  },
-  textTitle: {
-    fontSize: 18,
-    fontWeight: '600',
-    lineHeight: 26,
-    color: 'rgba(0, 0, 0, 0.85)'
-  },
-});
+  StyleSheet, Dimensions, StatusBar, Platform
+} from 'react-native'
 
 const colors = {
   black: '#000',
@@ -270,7 +8,6 @@ const colors = {
   transparent: 'transparent',
   // material design colors
   // https://material.io/design/color/the-color-system.html#tools-for-picking-colors
-  mdRed: '#F44336',
   mdRed: '#F44336', // error / danger
   mdRed50: '#FFEBEE',
   mdRed100: '#FFCDD2',
@@ -722,11 +459,280 @@ const colors = {
   adGrey8: '#595959',
   adGrey9: '#262626',
   adGrey10: '#000',
-  textPrimary: 'rgba(0, 0, 0, 0.85)', // heading
-  textRegular: 'rgba(0, 0, 0, 0.65)',
+  textTitle: 'rgba(0, 0, 0, 0.85)',
+  textTitleLight: 'rgba(0, 0, 0, 0.75)',
+  textMain: 'rgba(0, 0, 0, 0.65)',
+  textMainLight: 'rgba(0, 0, 0, 0.55)',
   textSecondary: 'rgba(0, 0, 0, 0.45)',
   textDisabled: 'rgba(0, 0, 0, 0.25)',
-  border: '#D9D9D9',
-};
+  border: '#D9D9D9'
+}
 
-export default { styles, colors };
+const typography = StyleSheet.create({
+  textThin: {
+    fontWeight: '100'
+  },
+  textExtraLight: {
+    fontWeight: '200'
+  },
+  textUltraLight: {
+    fontWeight: '200'
+  },
+  textLight: {
+    fontWeight: '300'
+  },
+  textRegular: {
+    fontWeight: '400'
+  },
+  textNormal: {
+    fontWeight: '400'
+  },
+  textMedium: {
+    fontWeight: '500'
+  },
+  textSemiBold: {
+    fontWeight: '600'
+  },
+  textBold: {
+    fontWeight: '700'
+  },
+  textExtraBold: {
+    fontWeight: '800'
+  },
+  textUltraBold: {
+    fontWeight: '800'
+  },
+  textBlack: {
+    fontWeight: '900'
+  },
+  textHeavy: {
+    fontWeight: '900'
+  },
+  text12: {
+    fontSize: 12,
+    lineHeight: 20
+  },
+  text13: {
+    fontSize: 13,
+    lineHeight: 21
+  },
+  text14: {
+    fontSize: 14,
+    lineHeight: 22
+  },
+  text15: {
+    fontSize: 15,
+    lineHeight: 23
+  },
+  text16: {
+    fontSize: 16,
+    lineHeight: 24
+  },
+  text17: {
+    fontSize: 17,
+    lineHeight: 25
+  },
+  text18: {
+    fontSize: 18,
+    lineHeight: 26
+  },
+  text19: {
+    fontSize: 19,
+    lineHeight: 27
+  },
+  text20: {
+    fontSize: 20,
+    lineHeight: 28
+  },
+  text21: {
+    fontSize: 21,
+    lineHeight: 29
+  },
+  text22: {
+    fontSize: 22,
+    lineHeight: 30
+  },
+  text23: {
+    fontSize: 23,
+    lineHeight: 31
+  },
+  text24: {
+    fontSize: 24,
+    lineHeight: 32
+  },
+  textLeft: {
+    textAlign: 'left'
+  },
+  textRight: {
+    textAlign: 'right'
+  },
+  textAlignCenter: {
+    textAlign: 'center'
+  },
+  textTop: {
+    textAlignVertical: 'top'
+  },
+  textBottom: {
+    textAlignVertical: 'bottom'
+  },
+  textAlignVerticalCenter: {
+    textAlignVertical: 'center'
+  },
+  textCenter: {
+    textAlign: 'center',
+    textAlignVertical: 'center'
+  },
+  textDisabled: {
+    color: colors.textDisabled
+  },
+  textSecondary: {
+    color: colors.textSecondary,
+    fontSize: 12,
+    fontWeight: '200',
+    lineHeight: 20
+  },
+  textMainLight: {
+    color: colors.textMainLight,
+    fontSize: 13,
+    fontWeight: '300',
+    lineHeight: 21
+  },
+  textMain: {
+    color: colors.textMain,
+    fontSize: 14,
+    fontWeight: '400',
+    lineHeight: 22
+  },
+  textTitleLight: {
+    color: colors.textTitleLight,
+    fontSize: 16,
+    fontWeight: '500',
+    lineHeight: 24
+  },
+  textTitle: {
+    color: colors.textTitle,
+    fontSize: 18,
+    fontWeight: '600',
+    lineHeight: 26
+  }
+})
+
+const { height, width } = Dimensions.get('window')
+
+const XWIDTH = 375
+const XHEIGHT = 812
+const isIos = Platform.OS === 'ios'
+const isIphoneX = isIos && width === XWIDTH && height === XHEIGHT
+
+const androidMarginTop = StatusBar.currentHeight
+const iphoneXMarginTop = 44
+const iosMarginTop = 20
+
+const androidMarginBottom = 0
+const iphoneXMarginBottom = 83
+const iosMarginBottom = 49
+
+const marginTop = androidMarginTop || (isIphoneX ? iphoneXMarginTop : iosMarginTop)
+const marginBottom = isIos
+  ? (isIphoneX
+    ? iphoneXMarginBottom
+    : iosMarginBottom
+  )
+  : androidMarginBottom
+const cutHeight = marginTop + marginBottom
+
+const layout = StyleSheet.create({
+  /* layout */
+  // container: View
+  // usually the root element of page
+  container: {
+    width,
+    height: height - cutHeight,
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop,
+    marginBottom
+  },
+  // header with 1 or 3 item(s): View
+  // 1 item: title
+  // 3 items: arrow-left icon, title, empty /  menu icon
+  header: {
+    flex: 0,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    height: 40,
+    paddingTop: 0,
+    paddingRight: 8,
+    paddingBottom: 0,
+    paddingLeft: 8,
+    borderBottomColor: colors.border,
+    borderBottomWidth: 1
+  },
+  // supposed to be an icon
+  headerLeft: {
+    flex: 0,
+    width: 26,
+    height: 26
+  },
+  // supposed to be a View wrapping a Text
+  headerMiddle: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 26,
+    textAlign: 'center'
+  },
+  // supposed to be an icon
+  headerRight: {
+    flex: 0,
+    width: 26,
+    height: 26
+  },
+  // body: View
+  body: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%'
+  },
+  // body's child: View
+  bodyNav: {
+    flex: 0,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '100%',
+    height: 40,
+    paddingTop: 0,
+    paddingRight: 8,
+    paddingBottom: 0,
+    paddingLeft: 8
+  },
+  // body's child: ScrollView / FlatList
+  bodyMain: {
+    flex: 1,
+    width: '100%'
+  },
+  // footer: View
+  footer: {
+    flex: 0,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    height: 40,
+    paddingTop: 0,
+    paddingRight: 8,
+    paddingBottom: 0,
+    paddingLeft: 8,
+    borderTopColor: colors.border,
+    borderTopWidth: 1
+  }
+})
+
+export default { colors, typography, layout }
