@@ -732,10 +732,4 @@ const layouts = StyleSheet.create({
   }
 })
 
-export default { colors, typography, layouts }
-
-// module.exports = {
-//   colors,
-//   typography,
-//   layouts
-// }
+export { colors, typography, layouts }
