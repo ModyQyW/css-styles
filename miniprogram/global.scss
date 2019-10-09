@@ -291,7 +291,7 @@ page {
 }
 
 /* button */
-[class^="btn-"] {
+button[class^="btn-"] {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -315,11 +315,11 @@ page {
   }
 }
 
-.btn-border {
+button.btn-border {
   border: 2rpx solid $black;
 }
 
-.btn-radius {
+button.btn-radius {
   border-radius: 8rpx;
 }
 
