@@ -470,13 +470,13 @@
   - `$adGrey9`: #262626 <input type="color" value="#262626" disabled>
   - `$adGrey10`: #000 <input type="color" value="#000000" disabled>
 - project preset colors
-  - `$textTitle`: rgba(0, 0, 0, .85)
-  - `$textTitleLight`: rgba(0, 0, 0, .75)
-  - `$textMain`: rgba(0, 0, 0, .65)
-  - `$textMainLight`: rgba(0, 0, 0, .55)
-  - `$textSecondary`: rgba(0, 0, 0, .45)
-  - `$textDisabled`: rgba(0, 0, 0, .25)
-  - `$border`: #D9D9D9 <input type="color" value="#D9D9D9" disabled>
+  - `$textTitleColor`: rgba(0, 0, 0, .85)
+  - `$textTitleLightColor`: rgba(0, 0, 0, .75)
+  - `$textMainColor`: rgba(0, 0, 0, .65)
+  - `$textMainLightColor`: rgba(0, 0, 0, .55)
+  - `$textSecondaryColor`: rgba(0, 0, 0, .45)
+  - `$textDisabledColor`: rgba(0, 0, 0, .25)
+  - `$borderColor`: #D9D9D9 <input type="color" value="#D9D9D9" disabled>
 
 ## [global.scss](./global.scss)
 
@@ -854,36 +854,36 @@ body,
 }
 
 .text-disabled {
-  color: $textDisabled;
+  color: $textDisabledColor;
 }
 
 .text-title {
   font-size: 18px;
   line-height: 26px;
-  color: $textTitle;
+  color: $textTitleColor;
 }
 
 .text-title-light {
   font-size: 16px;
   line-height: 24px;
-  color: $textTitleLight;
+  color: $textTitleLightColor;
 }
 
 .text-main {
   font-size: 14px;
   line-height: 22px;
-  color: $textMain;
+  color: $textMainColor;
 }
 
 .text-main-light {
   font-size: 13px;
   line-height: 21px;
-  color: $textMainLight;
+  color: $textMainLightColor;
 }
 
 .text-secondary {
   font-size: 12px;
   line-height: 20px;
-  color: $textSecondary;
+  color: $textSecondaryColor;
 }
 ```

@@ -39,7 +39,19 @@ page {
   width: 100%;
   height: 100%;
 
+  &.is-horizontal {
+    flex: 1;
+    flex-direction: row;
+    height: auto;
+
+    .main {
+      width: auto;
+      height: 100%;
+    }
+  }
+
   .header,
+  .nav,
   .footer {
     box-sizing: border-box;
     display: flex;
@@ -74,13 +86,19 @@ page {
   .header {
     flex: 0 0 $headerHeight;
     padding: $headerVerticalPadding $headerHorizontalPadding;
-    border-bottom: 2rpx solid $border;
+    border-bottom: 2rpx solid $borderColor;
+  }
+
+  .nav {
+    flex: 0 0 $navHeight;
+    overflow: hidden;
+    border-bottom: 2rpx solid $borderColor;
   }
 
   .footer {
     flex: 0 0 $footerHeight;
     padding: $footerVerticalPadding $footerHorizontalPadding;
-    border-top: 2rpx solid $border;
+    border-top: 2rpx solid $borderColor;
   }
 
   .aside {
@@ -102,17 +120,6 @@ page {
     justify-content: flex-start;
     width: 100%;
     height: auto;
-  }
-
-  &.is-horizontal {
-    flex: 1;
-    flex-direction: row;
-    height: auto;
-
-    .main {
-      width: auto;
-      height: 100%;
-    }
   }
 }
 
@@ -305,7 +312,7 @@ page {
   }
 
   &[disabled] {
-    background-color: $border;
+    background-color: $borderColor;
   }
 }
 
@@ -461,35 +468,35 @@ page,
 }
 
 .text-disabled {
-  color: $textDisabled;
+  color: $textDisabledColor;
 }
 
 .text-title {
   font-size: 36rpx;
   line-height: 52rpx;
-  color: $textTitle;
+  color: $textTitleColor;
 }
 
 .text-title-light {
   font-size: 32rpx;
   line-height: 48rpx;
-  color: $textTitleLight;
+  color: $textTitleLightColor;
 }
 
 .text-main {
   font-size: 28rpx;
   line-height: 44rpx;
-  color: $textMain;
+  color: $textMainColor;
 }
 
 .text-main-light {
   font-size: 26rpx;
   line-height: 42rpx;
-  color: $textMainLight;
+  color: $textMainLightColor;
 }
 
 .text-secondary {
   font-size: 24rpx;
   line-height: 40rpx;
-  color: $textSecondary;
+  color: $textSecondaryColor;
 }

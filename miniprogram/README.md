@@ -476,14 +476,14 @@
   - `$footerHeight`: 120rpx
   - `$footerVerticalPadding`: 0
   - `$footerHorizontalPadding`: 24rpx
-  - `$border-radius`: 8rpx
-  - `$textTitle`: rgba(0, 0, 0, .85)
-  - `$textTitleLight`: rgba(0, 0, 0, .75)
-  - `$textMain`: rgba(0, 0, 0, .65)
-  - `$textMainLight`: rgba(0, 0, 0, .55)
-  - `$textSecondary`: rgba(0, 0, 0, .45)
-  - `$textDisabled`: rgba(0, 0, 0, .25)
-  - `$border`: #D9D9D9 <input type="color" value="#D9D9D9" disabled>
+  - `$borderRadius`: 8rpx
+  - `$textTitleColor`: rgba(0, 0, 0, .85)
+  - `$textTitleLightColor`: rgba(0, 0, 0, .75)
+  - `$textMainColor`: rgba(0, 0, 0, .65)
+  - `$textMainLightColor`: rgba(0, 0, 0, .55)
+  - `$textSecondaryColor`: rgba(0, 0, 0, .45)
+  - `$textDisabledColor`: rgba(0, 0, 0, .25)
+  - `$borderColor`: #D9D9D9 <input type="color" value="#D9D9D9" disabled>
 
 ## [global.scss](./global.scss)
 
@@ -594,13 +594,13 @@ page {
   .header {
     flex: 0 0 $headerHeight;
     padding: $headerVerticalPadding $headerHorizontalPadding;
-    border-bottom: 2rpx solid $border;
+    border-bottom: 2rpx solid $borderColor;
   }
 
   .footer {
     flex: 0 0 $footerHeight;
     padding: $footerVerticalPadding $footerHorizontalPadding;
-    border-top: 2rpx solid $border;
+    border-top: 2rpx solid $borderColor;
   }
 
   .aside {
@@ -825,7 +825,7 @@ page {
   }
 
   &[disabled] {
-    background-color: $border;
+    background-color: $borderColor;
   }
 }
 
@@ -979,36 +979,36 @@ page,
 }
 
 .text-disabled {
-  color: $textDisabled;
+  color: $textDisabledColor;
 }
 
 .text-title {
   font-size: 36rpx;
   line-height: 52rpx;
-  color: $textTitle;
+  color: $textTitleColor;
 }
 
 .text-title-light {
   font-size: 32rpx;
   line-height: 48rpx;
-  color: $textTitleLight;
+  color: $textTitleLightColor;
 }
 
 .text-main {
   font-size: 28rpx;
   line-height: 44rpx;
-  color: $textMain;
+  color: $textMainColor;
 }
 
 .text-main-light {
   font-size: 26rpx;
   line-height: 42rpx;
-  color: $textMainLight;
+  color: $textMainLightColor;
 }
 
 .text-secondary {
   font-size: 24rpx;
   line-height: 40rpx;
-  color: $textSecondary;
+  color: $textSecondaryColor;
 }
 ```
