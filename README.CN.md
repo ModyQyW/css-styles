@@ -6,7 +6,72 @@
 
 ## 起步
 
-复制到你的项目中，引用，然后写上 class 或者 className。
+这些说明将让你得到能在本地启动、运行的项目副本以进行开发和测试。
+
+### 准备
+
+- 推荐使用 nvm，长期支持版 lts node，长期支持版 npm 和 yarn。
+  - 参照以下链接，首先安装 nvm
+    - [nvm for Mac/Linux](https://github.com/nvm-sh/nvm)
+    - [nvm-windows](https://github.com/coreybutler/nvm-windows)
+    - 使用 [Homebrew](https://brew.sh/) 在 Mac 安装 nvm 是**不**推荐的
+  - 接着在终端/命令行安装长期支持版 node
+
+    ```sh
+    # for now, lts version is 10.16.3
+    # last updated：2019.09.17
+    nvm install 10.16.3
+    ```
+
+  - 全局升级 npm 到长期支持版，安装 yarn
+
+    ```sh
+    npm i -g npm@lts
+    npm i -g yarn
+    ```
+
+  - 如果你是国人，或许你应该设置镜像
+- Git 也是需要的
+  - [git for Windows/Linux](https://git-scm.com/downloads)
+  - 使用 [Homebrew](https://brew.sh/) 在 Mac 安装 git 是推荐的
+
+### 安装
+
+```sh
+yarn add @modyqyw/css-styles
+# or
+npm i @modyqyw/css-styles
+```
+
+### 使用
+
+- taro / uni-app
+
+导入`miniprogram/global.scss`作为全局样式。
+
+```js
+import '@modyqyw/css-styles/miniprogram/global.scss';
+```
+
+导入`miniprogram/vars.scss`来使用预设颜色。
+
+```scss
+@import '~@modyqyw/css-styles/miniprogram/vars'
+```
+
+- react / vue
+
+导入`web/global.scss`作为全局样式。
+
+```js
+import '@modyqyw/css-styles/web/global.scss';
+```
+
+Import `web/vars.scss`来使用预设颜色。
+
+```scss
+@import '~@modyqyw/css-styles/web/vars'
+```
 
 ## 测试
 

@@ -6,7 +6,82 @@ English | [简体中文](README.CN.md)
 
 ## Getting Started
 
-Just copy into your project, import it and write class / className.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+- Using nvm, node lts, npm lts and yarn is recommended.
+  - Follow the links below and install nvm first
+    - [nvm for Mac/Linux](https://github.com/nvm-sh/nvm)
+    - [nvm-windows](https://github.com/coreybutler/nvm-windows)
+    - Using [Homebrew](https://brew.sh/) to install nvm on Mac is **NOT** recommended
+  - Then install node lts in terminal / command line
+
+    ```sh
+    # for now, lts version is 10.16.3
+    # last updated: 2019.09.17
+    nvm install 10.16.3
+    ```
+
+  - Globally update npm to lts and install yarn
+
+    ```sh
+    npm i -g npm@lts
+    npm i -g yarn
+    ```
+
+  - If you are Chinese, maybe you should set mirrors
+- Git is also required.
+  - [git for Windows/Linux](https://git-scm.com/downloads)
+  - Using [Homebrew](https://brew.sh/) to install git on Mac is recommended.
+
+### Installing
+
+```sh
+yarn add @modyqyw/css-styles
+# or
+npm i @modyqyw/css-styles
+```
+
+### Usage
+
+- taro / uni-app
+
+Import `miniprogram/global.scss` as global styles.
+
+```js
+import '@modyqyw/css-styles/miniprogram/global.scss';
+```
+
+Import `miniprogram/vars.scss` to use preset colors.
+
+```scss
+@import '~@modyqyw/css-styles/miniprogram/vars'
+```
+
+- react / vue
+
+Import `web/global.scss` as global styles.
+
+```js
+import '@modyqyw/css-styles/web/global.scss';
+```
+
+Import `web/vars.scss` to use preset colors.
+
+```scss
+@import '~@modyqyw/css-styles/web/vars'
+```
+
+- react native
+
+Import `app/reactnative/global` to get preset colors, typography, layouts.
+
+```js
+import { colors, typography, layouts } from '@modyqyw/css-styles/app/reactnative/global'
+// or
+// import gStyles from '@modyqyw/css-styles/app/reactnative/global'
+```
 
 ## Running the tests
 
