@@ -1,6 +1,6 @@
 import { StyleSheet, Dimensions, StatusBar, Platform } from 'react-native'
 
-const colors = {
+export const colors = {
   black: '#000',
   white: '#FFF',
   transparent: 'transparent',
@@ -466,7 +466,7 @@ const colors = {
   border: '#D9D9D9'
 }
 
-const typography = StyleSheet.create({
+export const typography = StyleSheet.create({
   textThin: {
     fontWeight: '100'
   },
@@ -639,7 +639,7 @@ const marginBottom = isIos
   : androidMarginBottom
 const cutHeight = marginTop + marginBottom
 
-const layouts = StyleSheet.create({
+export const layouts = StyleSheet.create({
   // container: View
   // usually the root element of page
   container: {
@@ -732,4 +732,4 @@ const layouts = StyleSheet.create({
   }
 })
 
-export { colors, typography, layouts }
+export default { colors, typography, layouts }
