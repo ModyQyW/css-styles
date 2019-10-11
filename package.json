@@ -6,8 +6,7 @@
   "license": "MIT",
   "scripts": {
     "lint:script": "eslint react-native",
-    "lint:style": "stylelint ./",
-    "publish": "npm publish"
+    "lint:style": "stylelint ./"
   },
   "publishConfig": {
     "access": "public"
