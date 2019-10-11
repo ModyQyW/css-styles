@@ -1,11 +1,13 @@
 {
   "name": "@modyqyw/css-styles",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Custom css styles.",
   "author": "ModyQyW <261857860@qq.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "stylelint ./"
+    "lint:script": "eslint react-native",
+    "lint:style": "stylelint ./",
+    "publish": "npm publish"
   },
   "publishConfig": {
     "access": "public"
@@ -15,6 +17,7 @@
     "url": "git@github.com:ModyQyW/css-styles.git"
   },
   "keywords": [
+    "scss",
     "css",
     "styles",
     "miniprogram",

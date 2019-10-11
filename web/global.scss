@@ -1,12 +1,4 @@
-/*
- * import normalize.css first and use autoprefixer
- * use default layout and container of the ui lib
- * 先引入 normalize.css，并且使用 autoprefixer
- * 使用 UI 库中默认的布局与容器
- */
-
 /* stylelint-disable selector-max-id */
-
 * {
   box-sizing: border-box;
 }
@@ -64,14 +56,6 @@ body,
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.w100-item {
-  width: 100%;
-}
-
-.h100-item {
-  height: 100%;
 }
 
 .flex {
@@ -213,21 +197,22 @@ body,
 /* typography */
 @font-face {
   font-family: Alibaba-PuHuiTi;
-  src: url("../assets/fonts/Alibaba-PuHuiTi-Regular.ttf"); // remember to modify
+  src: url("../assets/fonts/Alibaba-PuHuiTi-Regular.ttf");
 }
 
 @font-face {
   font-family: AlibabaSans;
-  src: url("../assets/fonts/AlibabaSans-Regular.otf"); // remember to modify
+  src: url("../assets/fonts/AlibabaSans-Regular.otf");
 }
 
 #app,
 #root {
   /* stylelint-disable value-list-comma-newline-after, value-list-comma-space-after */
   font-family:
-    Alibaba-PuHuiTi-Regular, AlibabaSans-Regular, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Avenir,
-    "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    Alibaba-PuHuiTi-Regular, AlibabaSans-Regular, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", Avenir, "Helvetica Neue",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
   /* stylelint-enable value-list-comma-newline-after, value-list-comma-space-after */
   -webkit-font-smoothing: antialiased;
@@ -365,4 +350,42 @@ body,
 
 .text-right {
   text-align: right;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-disabled {
+  color: $textDisabled;
+}
+
+.text-title {
+  font-size: 18px;
+  line-height: 26px;
+  color: $textTitle;
+}
+
+.text-title-light {
+  font-size: 16px;
+  line-height: 24px;
+  color: $textTitleLight;
+}
+
+.text-main {
+  font-size: 14px;
+  line-height: 22px;
+  color: $textMain;
+}
+
+.text-main-light {
+  font-size: 13px;
+  line-height: 21px;
+  color: $textMainLight;
+}
+
+.text-secondary {
+  font-size: 12px;
+  line-height: 20px;
+  color: $textSecondary;
 }

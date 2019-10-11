@@ -50,38 +50,44 @@ npm i @modyqyw/css-styles
 Import `miniprogram/global.scss` as global styles.
 
 ```js
-import '@modyqyw/css-styles/miniprogram/global.scss';
+import '@modyqyw/css-styles/miniprogram/global.scss'
 ```
 
 Import `miniprogram/vars.scss` to use preset colors.
 
 ```scss
-@import '~@modyqyw/css-styles/miniprogram/vars'
+@import "~@modyqyw/css-styles/miniprogram/vars.scss";
 ```
+
+Check [miniprogram/README](./miniprogram/README.md) for details.
 
 - react / vue
 
 Import `web/global.scss` as global styles.
 
 ```js
-import '@modyqyw/css-styles/web/global.scss';
+import '@modyqyw/css-styles/web/global.scss'
 ```
 
 Import `web/vars.scss` to use preset colors.
 
 ```scss
-@import '~@modyqyw/css-styles/web/vars'
+@import "~@modyqyw/css-styles/web/vars.scss";
 ```
+
+Check [web/README](./web/README.md) for details.
 
 - react native
 
-Import `app/reactnative/global` to get preset colors, typography, layouts.
+Import `react-native/global` to get preset colors, typography and layouts.
 
 ```js
-import { colors, typography, layouts } from '@modyqyw/css-styles/app/reactnative/global'
+import { colors, typography, layouts } from '@modyqyw/css-styles/react-native/global'
 // or
-// import gStyles from '@modyqyw/css-styles/app/reactnative/global'
+// import gStyles from '@modyqyw/css-styles/react-native/global'
 ```
+
+Check [app/react-native/README](./react-native/README.md) for details.
 
 ## Running the tests
 

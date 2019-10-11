@@ -99,7 +99,7 @@ $mdBlue900: #0D47A1 !default;
 $mdBlueA100: #82B1FF !default;
 $mdBlueA200: #448AFF !default;
 $mdBlueA400: #2979FF !default;
-$blueA700: #2962FF !default;
+$mdBlueA700: #2962FF !default;
 // light blue
 $mdLightBlue: #03A9F4 !default;
 $mdLightBlue50: #E1F5FE !default;
@@ -197,14 +197,14 @@ $mdLimeA200: #EEFF41 !default;
 $mdLimeA400: #C6FF00 !default;
 $mdLimeA700: #AEEA00 !default;
 // yellow
-$mdYellow: #FFEB3B !default;
+$mdYellow: #FFEB3B !default; // warning
 $mdYellow50: #FFFDE7 !default;
 $mdYellow100: #FFF9C4 !default;
 $mdYellow200: #FFF59D !default;
 $mdYellow300: #FFF176 !default;
 $mdYellow400: #FFEE58 !default;
-$mdYellow500: #FFEB3B !default;
-$mdYellow600: #FDD835 !default; // warning
+$mdYellow500: #FFEB3B !default; // warning
+$mdYellow600: #FDD835 !default;
 $mdYellow700: #FBC02D !default;
 $mdYellow800: #F9A825 !default;
 $mdYellow900: #F57F17 !default;
@@ -472,7 +472,7 @@ $adGray1: #FFF !default;
 $adGray2: #FAFAFA !default;
 $adGray3: #F5F5F5 !default;
 $adGray4: #E8E8E8 !default;
-$adGray5: #D9D9D9 !default; // border color
+$adGray5: #D9D9D9 !default; // border
 $adGray6: #BFBFBF !default;
 $adGray7: #8C8C8C !default;
 $adGray8: #595959 !default;
@@ -484,7 +484,7 @@ $adGrey1: #FFF !default;
 $adGrey2: #FAFAFA !default;
 $adGrey3: #F5F5F5 !default;
 $adGrey4: #E8E8E8 !default;
-$adGrey5: #D9D9D9 !default; // border color
+$adGrey5: #D9D9D9 !default; // border
 $adGrey6: #BFBFBF !default;
 $adGrey7: #8C8C8C !default;
 $adGrey8: #595959 !default;

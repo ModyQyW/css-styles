@@ -10,6 +10,7 @@ body,
   box-sizing: border-box;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 page {
@@ -21,6 +22,7 @@ page {
   overflow: hidden;
   font-size: 28rpx;
   font-weight: 400;
+  line-height: 44rpx;
 }
 
 .border-box {
@@ -143,14 +145,6 @@ page {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.w100-item {
-  width: 100%;
-}
-
-.h100-item {
-  height: 100%;
 }
 
 .flex {
@@ -329,11 +323,12 @@ page,
 #root {
   /* stylelint-disable value-list-comma-newline-after, value-list-comma-space-after */
   font-family:
-    Alibaba-PuHuiTi-Regular, AlibabaSans-Regular, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Avenir,
-    "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", Avenir, "Helvetica Neue",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
   /* stylelint-enable value-list-comma-newline-after, value-list-comma-space-after */
+  font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -459,4 +454,42 @@ page,
 
 .text-right {
   text-align: right;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-disabled {
+  color: $textDisabled;
+}
+
+.text-title {
+  font-size: 36rpx;
+  line-height: 52rpx;
+  color: $textTitle;
+}
+
+.text-title-light {
+  font-size: 32rpx;
+  line-height: 48rpx;
+  color: $textTitleLight;
+}
+
+.text-main {
+  font-size: 28rpx;
+  line-height: 44rpx;
+  color: $textMain;
+}
+
+.text-main-light {
+  font-size: 26rpx;
+  line-height: 42rpx;
+  color: $textMainLight;
+}
+
+.text-secondary {
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: $textSecondary;
 }

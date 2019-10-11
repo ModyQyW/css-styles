@@ -81,13 +81,13 @@ export const colors = {
   mdIndigoA200: '#536DFE',
   mdIndigoA400: '#3D5AFE',
   mdIndigoA700: '#304FFE',
-  mdBlue: '#2196F3',
+  mdBlue: '#2196F3', // primary
   mdBlue50: '#E3F2FD',
   mdBlue100: '#BBDEFB',
   mdBlue200: '#90CAF9',
   mdBlue300: '#64B5F6',
   mdBlue400: '#42A5F5',
-  mdBlue500: '#2196F3',
+  mdBlue500: '#2196F3', // primary
   mdBlue600: '#1E88E5',
   mdBlue700: '#1976D2',
   mdBlue800: '#1565C0',
@@ -95,7 +95,7 @@ export const colors = {
   mdBlueA100: '#82B1FF',
   mdBlueA200: '#448AFF',
   mdBlueA400: '#2979FF',
-  blueA700: '#2962FF',
+  mdBlueA700: '#2962FF',
   mdLightBlue: '#03A9F4',
   mdLightBlue50: '#E1F5FE',
   mdLightBlue100: '#B3E5FC',
@@ -186,14 +186,14 @@ export const colors = {
   mdLimeA200: '#EEFF41',
   mdLimeA400: '#C6FF00',
   mdLimeA700: '#AEEA00',
-  mdYellow: '#FFEB3B',
+  mdYellow: '#FFEB3B', // warning
   mdYellow50: '#FFFDE7',
   mdYellow100: '#FFF9C4',
   mdYellow200: '#FFF59D',
   mdYellow300: '#FFF176',
   mdYellow400: '#FFEE58',
-  mdYellow500: '#FFEB3B',
-  mdYellow600: '#FDD835', // warning
+  mdYellow500: '#FFEB3B', // warning
+  mdYellow600: '#FDD835',
   mdYellow700: '#FBC02D',
   mdYellow800: '#F9A825',
   mdYellow900: '#F57F17',
@@ -440,7 +440,7 @@ export const colors = {
   adGray2: '#FAFAFA',
   adGray3: '#F5F5F5',
   adGray4: '#E8E8E8',
-  adGray5: '#D9D9D9', // border color
+  adGray5: '#D9D9D9', // border
   adGray6: '#BFBFBF',
   adGray7: '#8C8C8C',
   adGray8: '#595959',
@@ -451,7 +451,7 @@ export const colors = {
   adGrey2: '#FAFAFA',
   adGrey3: '#F5F5F5',
   adGrey4: '#E8E8E8',
-  adGrey5: '#D9D9D9', // border color
+  adGrey5: '#D9D9D9', // border
   adGrey6: '#BFBFBF',
   adGrey7: '#8C8C8C',
   adGrey8: '#595959',
@@ -586,31 +586,26 @@ export const typography = StyleSheet.create({
   textSecondary: {
     color: colors.textSecondary,
     fontSize: 12,
-    fontWeight: '200',
     lineHeight: 20
   },
   textMainLight: {
     color: colors.textMainLight,
     fontSize: 13,
-    fontWeight: '300',
     lineHeight: 21
   },
   textMain: {
     color: colors.textMain,
     fontSize: 14,
-    fontWeight: '400',
     lineHeight: 22
   },
   textTitleLight: {
     color: colors.textTitleLight,
     fontSize: 16,
-    fontWeight: '500',
     lineHeight: 24
   },
   textTitle: {
     color: colors.textTitle,
     fontSize: 18,
-    fontWeight: '600',
     lineHeight: 26
   }
 })
