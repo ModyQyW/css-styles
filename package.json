@@ -2,7 +2,6 @@
   "name": "css-styles",
   "version": "0.0.1",
   "description": "Custom css styles.",
-  "private": true,
   "author": "ModyQyW",
   "license": "Apache-2.0",
   "scripts": {
