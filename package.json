@@ -7,6 +7,23 @@
   "scripts": {
     "lint": "stylelint ./"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ModyQyW/css-styles.git"
+  },
+  "keywords": [
+    "css",
+    "styles",
+    "miniprogram",
+    "web",
+    "uni-app",
+    "taro",
+    "vue",
+    "react"
+  ],
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "eslint": "^6.5.1",
