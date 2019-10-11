@@ -1,8 +1,8 @@
 {
-  "name": "css-styles",
+  "name": "@modyqyw/css-styles",
   "version": "0.0.1",
   "description": "Custom css styles.",
-  "author": "ModyQyW",
+  "author": "ModyQyW <261857860@qq.com>",
   "license": "Apache-2.0",
   "scripts": {
     "lint": "stylelint ./"
