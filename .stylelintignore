@@ -2,6 +2,7 @@ assets
 node_modules
 .gitattributes
 LICENSE
-package.json
+*.json
 *.js
+*.ts
 *.md
