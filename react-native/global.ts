@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions, StatusBar, Platform } from 'react-native'
+import { Dimensions, Platform, StatusBar, StyleSheet } from 'react-native'
 
 export const colors = {
   black: '#000',

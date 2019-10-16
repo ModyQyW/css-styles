@@ -1,3 +1,15 @@
 {
-  "extends": "tslint-config-standard"
+  "extends": ["tslint:latest", "tslint-react", "tslint-react-hooks"],
+  "rules": {
+    "no-empty": false,
+    "object-literal-sort-keys": [
+      true,
+      "locale-compare",
+      "match-declaration-order-only"
+    ],
+    "quotemark": [true, "single", "jsx-double", "avoid-escape"],
+    "semicolon": [true, "never"],
+    "space-before-function-paren": [true, "always"],
+    "trailing-comma": [true, {"multiline": "never", "singleline": "never"}]
+  }
 }

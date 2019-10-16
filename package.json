@@ -1,6 +1,6 @@
 {
   "name": "@modyqyw/css-styles",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Custom css styles.",
   "author": "ModyQyW <261857860@qq.com>",
   "license": "MIT",
@@ -43,7 +43,11 @@
     "stylelint": "^11.1.1",
     "stylelint-config-twbs-bootstrap": "^0.7.0",
     "tslint": "^5.20.0",
-    "tslint-config-standard": "^8.0.1",
+    "tslint-react": "^4.1.0",
+    "tslint-react-hooks": "^2.2.1",
     "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "react-native": "0.59.10"
   }
 }
