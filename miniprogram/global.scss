@@ -308,10 +308,6 @@ page {
   &::after {
     border: none;
   }
-
-  &[disabled] {
-    background-color: $borderColor;
-  }
 }
 
 .btn-border {
