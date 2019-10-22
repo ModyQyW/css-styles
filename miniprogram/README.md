@@ -520,8 +520,6 @@ uni-app:
 ### content
 
 ```scss
-/* stylelint-disable selector-max-id */
-
 @import "./vars.scss";
 
 /* layout */
@@ -575,6 +573,7 @@ page {
   .header,
   .nav,
   .footer {
+    position: relative;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -624,6 +623,7 @@ page {
   }
 
   .aside {
+    position: relative;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -634,6 +634,7 @@ page {
   }
 
   .main {
+    position: relative;
     box-sizing: border-box;
     display: flex;
     flex: auto;
