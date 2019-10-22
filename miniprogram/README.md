@@ -520,7 +520,9 @@ uni-app:
 ### content
 
 ```scss
-@import "./vars";
+/* stylelint-disable selector-max-id */
+
+@import "./vars.scss";
 
 /* layout */
 html,
@@ -559,7 +561,19 @@ page {
   width: 100%;
   height: 100%;
 
+  &.is-horizontal {
+    flex: 1;
+    flex-direction: row;
+    height: auto;
+
+    .main {
+      width: auto;
+      height: 100%;
+    }
+  }
+
   .header,
+  .nav,
   .footer {
     box-sizing: border-box;
     display: flex;
@@ -597,6 +611,12 @@ page {
     border-bottom: 2rpx solid $borderColor;
   }
 
+  .nav {
+    flex: 0 0 $navHeight;
+    overflow: hidden;
+    border-bottom: 2rpx solid $borderColor;
+  }
+
   .footer {
     flex: 0 0 $footerHeight;
     padding: $footerVerticalPadding $footerHorizontalPadding;
@@ -622,17 +642,6 @@ page {
     justify-content: flex-start;
     width: 100%;
     height: auto;
-  }
-
-  &.is-horizontal {
-    flex: 1;
-    flex-direction: row;
-    height: auto;
-
-    .main {
-      width: auto;
-      height: 100%;
-    }
   }
 }
 
@@ -811,21 +820,15 @@ page {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 80rpx;
-  padding: 0;
+  padding: 12rpx 32rpx;
   margin: 0;
   font-size: 28rpx;
   line-height: 44rpx;
-  color: $black;
   text-align: center;
   border: none;
 
   &::after {
     border: none;
-  }
-
-  &[disabled] {
-    background-color: $borderColor;
   }
 }
 
@@ -881,11 +884,13 @@ page {
 page,
 #app,
 #root {
+  /* stylelint-disable value-list-comma-newline-after, value-list-comma-space-after */
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
     "Hiragino Sans GB", "Microsoft YaHei", Avenir, "Helvetica Neue",
     Helvetica, Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
+  /* stylelint-enable value-list-comma-newline-after, value-list-comma-space-after */
   font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
