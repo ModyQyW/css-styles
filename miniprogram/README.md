@@ -837,6 +837,46 @@ page {
   border-radius: 8rpx;
 }
 
+/* icon */
+[class^="icon-"] {
+  margin: 4rpx 8rpx;
+}
+
+.icon-xs {
+  width: 24rpx;
+  height: 24rpx;
+  font-size: 24rpx;
+  line-height: 24rpx;
+}
+
+.icon-sm {
+  width: 32rpx;
+  height: 32rpx;
+  font-size: 32rpx;
+  line-height: 32rpx;
+}
+
+.icon-md {
+  width: 40rpx;
+  height: 40rpx;
+  font-size: 40rpx;
+  line-height: 40rpx;
+}
+
+.icon-lg {
+  width: 48rpx;
+  height: 48rpx;
+  font-size: 40rpx;
+  line-height: 40rpx;
+}
+
+.icon-xl {
+  width: 56rpx;
+  height: 56rpx;
+  font-size: 56rpx;
+  line-height: 56rpx;
+}
+
 /* typography */
 page,
 #app,

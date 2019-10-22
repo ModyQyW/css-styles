@@ -47,16 +47,20 @@ npm i @modyqyw/css-styles
 
 - taro / uni-app
 
-引入`miniprogram/global.scss`作为全局样式。
+使用绝对引入来引入`miniprogram/global.scss`作为全局样式。
 
 ```js
+// projectName/src/app.tsx
+// projectName/src/app.ts
+// projectName/src/main.js
 import '@modyqyw/css-styles/miniprogram/global.scss'
 ```
 
-引入`miniprogram/vars.scss`来使用预设颜色。
+使用相对引入来引入`miniprogram/vars.scss`来使用预设颜色。
 
 ```scss
-@import "~@modyqyw/css-styles/miniprogram/vars.scss";
+// projectName/src/vars.scss
+@import "../node_modules/@modyqyw/css-styles/miniprogram/vars.scss";
 ```
 
 查看 [miniprogram/README](./miniprogram/README.md) 获取详细信息。

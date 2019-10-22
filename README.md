@@ -47,16 +47,20 @@ npm i @modyqyw/css-styles
 
 - taro / uni-app
 
-Import `miniprogram/global.scss` as global styles.
+Import `miniprogram/global.scss` as global styles using absolute import.
 
 ```js
+// projectName/src/app.tsx
+// projectName/src/app.ts
+// projectName/src/main.js
 import '@modyqyw/css-styles/miniprogram/global.scss'
 ```
 
-Import `miniprogram/vars.scss` to use preset colors.
+Import `miniprogram/vars.scss` to use preset colors using relative import.
 
 ```scss
-@import "~@modyqyw/css-styles/miniprogram/vars.scss";
+// projectName/src/vars.scss
+@import "../node_modules/@modyqyw/css-styles/miniprogram/vars.scss";
 ```
 
 Check [miniprogram/README](./miniprogram/README.md) for details.
