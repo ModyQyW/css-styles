@@ -51,7 +51,8 @@ npm i @modyqyw/css-styles
 
 ```js
 // projectName/src/app.tsx
-// projectName/src/app.ts
+// projectName/src/app.js
+// projectName/src/main.ts
 // projectName/src/main.js
 import '@modyqyw/css-styles/miniprogram/global.scss'
 ```
