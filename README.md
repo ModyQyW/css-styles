@@ -64,8 +64,6 @@ Import `miniprogram/vars.scss` to use preset colors using relative import.
 @import "../node_modules/@modyqyw/css-styles/miniprogram/vars.scss";
 ```
 
-Check [miniprogram/README](./miniprogram/README.md) for details.
-
 - react / vue
 
 Import `web/global.scss` as global styles.
@@ -80,8 +78,6 @@ Import `web/vars.scss` to use preset colors.
 @import "~@modyqyw/css-styles/web/vars.scss";
 ```
 
-Check [web/README](./web/README.md) for details.
-
 - react native
 
 Import `react-native/global` to get preset colors, typography and layouts.
@@ -91,8 +87,6 @@ import { colors, typography, layouts } from '@modyqyw/css-styles/react-native/gl
 // or
 // import gStyles from '@modyqyw/css-styles/react-native/global'
 ```
-
-Check [app/react-native/README](./react-native/README.md) for details.
 
 ## Running the tests
 

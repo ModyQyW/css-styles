@@ -64,8 +64,6 @@ import '@modyqyw/css-styles/miniprogram/global.scss'
 @import "../node_modules/@modyqyw/css-styles/miniprogram/vars.scss";
 ```
 
-查看 [miniprogram/README](./miniprogram/README.md) 获取详细信息。
-
 - react / vue
 
 引入`web/global.scss`作为全局样式。
@@ -80,8 +78,6 @@ import '@modyqyw/css-styles/web/global.scss'
 @import "~@modyqyw/css-styles/web/vars.scss";
 ```
 
-查看 [web/README](./web/README.md) 获取详细信息。
-
 - react native
 
 引入`react-native/global`来使用预设颜色，排版和布局。
@@ -91,8 +87,6 @@ import { colors, typography, layouts } from '@modyqyw/css-styles/react-native/gl
 // or
 // import gStyles from '@modyqyw/css-styles/react-native/global'
 ```
-
-查看 [react-native/README](./react-native/README.md) 获取详细信息。
 
 ## 测试
 
