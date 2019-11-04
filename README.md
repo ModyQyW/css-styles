@@ -97,6 +97,8 @@ No tests now. Pull requests are welcome.
 - Preset layouts
 - Preset typography
 - Preset colors, two styles - Material Design and Ant Design
+- Use `class` to add almost all styles
+- High scalability
 
 ## Contributing
 

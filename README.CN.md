@@ -97,6 +97,8 @@ import { colors, typography, layouts } from '@modyqyw/css-styles/react-native/gl
 - 预设布局
 - 预设排版
 - 两种风格的预设颜色：Material Design 和 Ant Design
+- 使用`class`来添加几乎所有的样式
+- 高扩展性
 
 ## 贡献
 

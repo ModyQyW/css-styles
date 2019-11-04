@@ -226,32 +226,32 @@ body,
 
 .overflow-hidden {
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .overflow-auto {
   box-sizing: border-box;
-  overflow: auto;
+  overflow: auto !important;
 }
 
 .overflow-x-hidden {
   box-sizing: border-box;
-  overflow: hidden auto;
+  overflow: hidden auto !important;
 }
 
 .overflow-y-hidden {
   box-sizing: border-box;
-  overflow: auto hidden;
+  overflow: auto hidden !important;
 }
 
 .overflow-x-auto {
   box-sizing: border-box;
-  overflow: auto hidden;
+  overflow: auto hidden !important;
 }
 
 .overflow-y-auto {
   box-sizing: border-box;
-  overflow: hidden auto;
+  overflow: hidden auto !important;
 }
 
 /* typography */
